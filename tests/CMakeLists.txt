@@ -2,12 +2,16 @@ cmake_minimum_required(VERSION 3.12)
 
 # List all files containing tests. (Change as needed)
 set(TESTFILES        # All .cpp files in tests/
-    main.cpp
     dummy.cpp
+    # main.cpp
+    test1.cpp
+    TestMat3.cpp
+    TestVec3.cpp
+    drones_tests.cpp
 )
 
 set(TEST_MAIN unit_tests)   # Default name for test executable (change if you wish).
-set(TEST_RUNNER_PARAMS "-V")  # Any arguments to feed the test runner (change as needed).
+set(TEST_RUNNER_PARAMS "")  # Any arguemnts to feed the test runner (change as needed).
 
 # --------------------------------------------------------------------------------
 #                         Make Tests (no change needed).
@@ -31,7 +35,3 @@ add_test(
 # Adds a 'coverage' target.
 include(CodeCoverage)
 
-# verbose full described tests (make fulltest)
-add_custom_target(fulltest
-    ${TEST_MAIN} -s
-    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})

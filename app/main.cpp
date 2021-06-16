@@ -11,12 +11,18 @@
 #include <stdlib.h>
 #include <fstream>
 #include <string>
-
+#include <cmath>
+#include <cassert>
+#include <unistd.h>
+#include "scena.hh"
 #include "exampleConfig.h"
 #include "example.h"
-#include "vector.hh"
+#include "Vector3.hh"
 #include "matrix.hh"
-#include "../inc/lacze_do_gnuplota.hh"
+#include "../include/lacze_do_gnuplota.hh"
+
+using namespace std;
+
 
 /*!
  * Simple main program that demontrates how access
@@ -25,89 +31,8 @@
  * EDIT: dodane kreowanie wektorow i macierzy plus obsluga lacza do gnuplota
  */
 
-#define DL_KROTKI_BOK  100
-#define DL_DLUGI_BOK   150
-
-/*!
- * Przyklad zapisu wspolrzednych zbioru punktow do strumienia wyjściowego.
- * Dane sa odpowiednio sformatowane, tzn. przyjęto notację stałoprzecinkową
- * z dokładnością do 10 miejsca po przecinku. Szerokość wyświetlanego pola 
- * to 16 miejsc, sposób wyrównywania - do prawej strony.
- * \param[in] StrmWy - strumien wyjsciowy, do ktorego maja zostac zapisane
- *                     kolejne wspolrzedne.
- * \param[in] Przesuniecie - ten parameter jest tylko po to, aby pokazać
- *                          mozliwosc zmiany wspolrzednych i prostokata
- *                          i zmiane jego polorzenia na okienku graficznym
- *                         rysownym przez gnuplota.
- * \retval true - gdy operacja zapisu powiodła się,
- * \retval false - w przypadku przeciwnym.
- */
-void PrzykladZapisuWspolrzednychDoStrumienia( std::ostream&     StrmWy, 
-                                              double       Przesuniecie
-                                            )
-{
-   //---------------------------------------------------------------
-   // To tylko przyklad !!!
-   // W programie nalezy uzywać pojęcia wektora, a nie oddzielnych 
-   // zmiennych do reprezentowania wspolrzednych!
-   //
-  double  x1, y1, x2, y2, x3, y3, x4, y4; 
-
-  x1 = y1 = 10;
-  x2 = x1 + DL_DLUGI_BOK;  y2 = y1;
-  x3 = x2;  y3 = y2 + DL_KROTKI_BOK;
-  x4 = x3 - DL_DLUGI_BOK; y4 = y3;
-
-
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x1+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y1+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x2+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y2+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x3+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y3+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x4+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y4+Przesuniecie << std::endl;
-  StrmWy << std::setw(16) << std::fixed << std::setprecision(10) << x1+Przesuniecie 
-         << std::setw(16) << std::fixed << std::setprecision(10) << y1+Przesuniecie << std::endl; 
-                             // Jeszcze raz zapisujemy pierwszy punkt,
-                             // aby gnuplot narysowal zamkniętą linię.
-}
-
-
-
-/*!
- * Przyklad zapisu wspolrzednych zbioru punktow do pliku, z ktorego
- * dane odczyta program gnuplot i narysuje je w swoim oknie graficznym.
- * \param[in] sNazwaPliku - nazwa pliku, do którego zostana zapisane
- *                          wspolrzędne punktów.
- * \param[in] Przesuniecie - ten parameter jest tylko po to, aby pokazać
- *                          mozliwosc zmiany wspolrzednych i prostokata
- *                          i zmiane jego polorzenia na okienku graficznym
- *                         rysownym przez gnuplota.
- * \retval true - gdy operacja zapisu powiodła się,
- * \retval false - w przypadku przeciwnym.
- */
-bool PrzykladZapisuWspolrzednychDoPliku( const char  *sNazwaPliku,
-                                         double       Przesuniecie
-                                       )
-{
-  std::ofstream  StrmPlikowy;
-
-  StrmPlikowy.open(sNazwaPliku);
-  if (!StrmPlikowy.is_open())  {
-    std::cerr << ":(  Operacja otwarcia do zapisu \"" << sNazwaPliku << "\"" << std::endl
-	 << ":(  nie powiodla sie." << std::endl;
-    return false;
-  }
-
-  PrzykladZapisuWspolrzednychDoStrumienia(StrmPlikowy, Przesuniecie);
-
-  StrmPlikowy.close();
-  return !StrmPlikowy.fail();
-}
-
 int main() {
-  std::cout << "Project Rotation 2D based on C++ Boiler Plate v"
+  std::cout << "Project Rotation 3D based on C++ Boiler Plate v"
             << PROJECT_VERSION_MAJOR /*duże zmiany, najczęściej brak kompatybilności wstecz */
             << "."
             << PROJECT_VERSION_MINOR /* istotne zmiany */
@@ -116,61 +41,256 @@ int main() {
             << "."
             << PROJECT_VERSION_TWEAK /* zmiany estetyczne itd. */
             << std::endl;
-  // std::system("cat ../LICENSE");
-  // do zadania Rotacja 2D
-  std::cout << "Vector:" << std::endl;
-  Vector tmpV1 = Vector();
-  std::cout << "Vector - konstruktor bezparametryczny:\n" << tmpV1 << std::endl;
-  double argumentsV[] = {1.0, 2.0};
-  Vector tmpV2 = Vector(argumentsV);
-  std::cout << "Vector - konstruktor parametryczny:\n" << tmpV2 << std::endl;
 
-  std::cout << "Matrix:" << std::endl;
-  Matrix tmpM1 = Matrix();
-  std::cout << "Matrix - konstruktor bezparametryczny:\n" << tmpM1 << std::endl;
-  double argumentsM[][SIZE] = {{1.0, 2.0},{3.0, 4.0}};
-  Matrix tmpM2 = Matrix(argumentsM);
-  std::cout << "Matrix - konstruktor parametryczny:\n" << tmpM2 << std::endl;
+PzG::LaczeDoGNUPlota Lacze;  // Ta zmienna jest potrzebna do wizualizacji
+                                // rysunku Prostopadla
 
-    PzG::LaczeDoGNUPlota  Lacze;  // Ta zmienna jest potrzebna do wizualizacji
-                                // rysunku prostokata
+scena Scena;
 
+  Lacze.ZmienTrybRys(PzG::TR_3D);
+  Lacze.Inicjalizuj();
+  Lacze.UstawZakresX(0,200);
+  Lacze.UstawZakresY(0,200);
+  Lacze.UstawZakresZ(0,120);
+
+  Lacze.UstawRotacjeXZ(64,65);
    //-------------------------------------------------------
-   //  Wspolrzedne wierzcholkow beda zapisywane w pliku "prostokat.dat"
+   //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadl.dat"
    //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane
    //  na dwa sposoby:
    //   1. Rysowane jako linia ciagl o grubosci 2 piksele
    //
-  Lacze.DodajNazwePliku("../datasets/prostokat.dat",PzG::RR_Ciagly,2);
-   //
-   //   2. Rysowane jako zbior punktow reprezentowanych przez kwadraty,
-   //      których połowa długości boku wynosi 2.
-   //
-  Lacze.DodajNazwePliku("../datasets/prostokat.dat",PzG::RR_Punktowy,2);
-   //
-   //  Ustawienie trybu rysowania 2D, tzn. rysowany zbiór punktów
-   //  znajduje się na wspólnej płaszczyźnie. Z tego powodu powoduj
-   //  jako wspolrzedne punktow podajemy tylko x,y.
-   //
-  Lacze.ZmienTrybRys(PzG::TR_2D);
+  Lacze.DodajNazwePliku(PLASZCZYZNA_WZ);
+  
+  PzG::InfoPlikuDoRysowania *col_corp = &Lacze.DodajNazwePliku(SZESCIAN_ZM);
+  PzG::InfoPlikuDoRysowania *col_rot1 = &Lacze.DodajNazwePliku(ROTORY_1);
+  PzG::InfoPlikuDoRysowania *col_rot2 = &Lacze.DodajNazwePliku(ROTORY_2);
+  PzG::InfoPlikuDoRysowania *col_rot3 = &Lacze.DodajNazwePliku(ROTORY_3);
+  PzG::InfoPlikuDoRysowania *col_rot4 = &Lacze.DodajNazwePliku(ROTORY_4);
 
-  PrzykladZapisuWspolrzednychDoStrumienia(std::cout,0);
-  if (!PrzykladZapisuWspolrzednychDoPliku("../datasets/prostokat.dat",0)) return 1;
-  Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
-  std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-  std::cin.ignore(100000,'\n');
-   //----------------------------------------------------------
-   // Ponownie wypisuje wspolrzedne i rysuje prostokąt w innym miejscu.
-   //
-  PrzykladZapisuWspolrzednychDoStrumienia(std::cout,50);
-  if (!PrzykladZapisuWspolrzednychDoPliku("../datasets/prostokat.dat",50)) return 1;
-  Lacze.Rysuj(); // <- Tutaj gnuplot rysuje, to co zapisaliśmy do pliku
-  std::cout << "Naciśnij ENTER, aby kontynuowac" << std::endl;
-  std::cin.ignore(100000,'\n');
+  col_corp->ZmienKolor(1);
+  col_rot1->ZmienKolor(2);
+  col_rot2->ZmienKolor(2);
+  col_rot3->ZmienKolor(2);
+  col_rot4->ZmienKolor(2);
 
-  // Z bazy projektu-wydmuszki Boiler Plate C++:
-  // Bring in the dummy class from the example source,
-  // just to show that it is accessible from main.cpp.
+  PzG::InfoPlikuDoRysowania *col_corp_v2 = &Lacze.DodajNazwePliku(SZESCIAN_ZM_V2);
+  PzG::InfoPlikuDoRysowania *col_rot1_v2 = &Lacze.DodajNazwePliku(ROTORY_1_V2);
+  PzG::InfoPlikuDoRysowania *col_rot2_v2 = &Lacze.DodajNazwePliku(ROTORY_2_V2);
+  PzG::InfoPlikuDoRysowania *col_rot3_v2 = &Lacze.DodajNazwePliku(ROTORY_3_V2);
+  PzG::InfoPlikuDoRysowania *col_rot4_v2 = &Lacze.DodajNazwePliku(ROTORY_4_V2);
+
+  col_corp_v2->ZmienKolor(3);
+  col_rot1_v2->ZmienKolor(4);
+  col_rot2_v2->ZmienKolor(4);
+  col_rot3_v2->ZmienKolor(4);
+  col_rot4_v2->ZmienKolor(4);
+
+  
+  Lacze.Rysuj();
+  
+  cout << "Beginning" << endl;
+  Scena.Initiation_begin_obstacles(Lacze);
+
+  Vector3 position;
+  cout << "m - menu" << endl;
+  cout << "a - choose active drone" << endl;
+  cout << "p - parameters of the flight" << endl;
+  cout << "w - number of used vectors" << endl;
+  cout << "s - scout" << endl;
+  cout << "o - add obstacle" << endl;
+  cout << "d - delete obstacle" << endl;
+  cout << "k - end" << endl;
+
+  Drone drone1, drone2;
+  Drone *drn;
+
+  double arg1[] = {20,20,0};
+  drone1.position[0] = Vector3(arg1);
+  drone1.Engage2(0, drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1,0);
+  double arg2[] = {20,60,0};
+  drone2.position[0] = Vector3(arg2);
+  drone2.Engage2(0, drone2.position[0], NamesFilesLoc_V2, NamesFilesProp_V2,0);
+  Lacze.Rysuj();
+
+  drone1.position[1] = drone1.position[0];
+  drone2.position[1] = drone2.position[0];
+
+  drone1.set_mid(drone1.position[0]);
+  drone1.set_obst(drone1.get_corp(SZESCIAN_ZM));
+  drone1.set_name("Drone1");
+  drone2.set_mid(drone2.position[0]);
+  drone2.set_obst(drone2.get_corp(SZESCIAN_ZM_V2));
+  drone2.set_name("Drone2");
+
+  Scena.Add_drone(drone1);
+  Scena.Add_drone(drone2);
+
+  
+  Scena.Objects.push_front(make_shared<Drone>(drone2));
+  Scena.Objects.push_front(make_shared<Drone>(drone1));
+
+  double choice_drone = 0;
+  double angle1=0, angle2=0;
+  double tmp1 = 0, tmp2 = 0;
+  unsigned int temp = 0;
+  char choice = 'a';
+  while (choice != 'k'){
+  
+    Lacze.Rysuj();
+    switch( choice ){
+
+      case 'p':{ 
+        double lenght;
+        if(choice_drone == 1){
+          cout << "Enter the direction (angle in degrees): ";
+          cin >> angle1;
+          cout << "Enter the lenght of the flight: ";
+          cin >> lenght;
+          angle1 += tmp1;
+          Scena.Make_Path(Lacze, choice_drone, Path_V1, lenght, angle1);
+          (*drn).Relocate(Scena.Objects,choice_drone, angle1, lenght, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);
+          Lacze.UsunNazwePliku(Path_V1);
+          tmp1 = angle1;
+          }
+        else if(choice_drone == 2){
+          cout << "Enter the direction (angle in degrees): ";
+          cin >> angle2;
+          cout << "Enter the lenght of the flight: ";
+          cin >> lenght;
+          angle2 += tmp2;
+          Scena.Make_Path(Lacze, choice_drone, Path_V2, lenght, angle2);
+          (*drn).Relocate(Scena.Objects,choice_drone, angle2,lenght, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);
+          Lacze.UsunNazwePliku(Path_V2);
+          tmp2 = angle2;
+        }
+        else{
+          cout << "You have choosen wrong drone " << endl;
+        }
+        (*drn).position[1] = (*drn).position[0];
+      break;}
+
+      case 'm':{
+        cout << "m - menu" << endl;
+        cout << "a - choose active drone" << endl;
+        cout << "p - parameters of the flight" << endl;
+        cout << "w - number of used vectors" << endl;
+        cout << "s - scout" << endl;
+        cout << "o - add obstacle" << endl;
+        cout << "d - delete obstacle" << endl;
+        cout << "k - end" << endl;
+        break;}
+
+      case 'w':{
+        cout << "Amount of Vectors in use: " << drn->position[0].amount_active_vectors() << endl;
+        cout << "Amount of Vectors used: " << drn->position[0].amount_of_all_vectors() << endl;
+        break;}
+
+      case 's':{
+        if(choice_drone == 1){
+        (*drn).Scouting(angle1, Lacze, NamesFilesLoc_V1, NamesFilesProp_V1);}
+        else if(choice_drone == 2){
+        (*drn).Scouting(angle2, Lacze, NamesFilesLoc_V2, NamesFilesProp_V2);}
+        break;}
+
+      case 'k':{
+        cout << "the end" << endl;
+        break;}
+
+      case 'o':{
+        char obs_choice;
+        Vector3 beg_position;
+        Vector3 scale;
+        cout << "which type of obstacle you want to add ?" << endl;
+        cout << "1 - Piramid" << endl;
+        cout << "2 - Mountain with ridge" << endl;
+        cout << "3 - Cuboid" << endl;
+        cin >> obs_choice;
+        cout << "where do you want the middle of obstacle write position x,y" << endl;
+        cin >> beg_position[0];
+        cin >> beg_position[1];
+        cout << "Choose the scale on OX, OY, OZ (for example 10 10 60): " << std::endl;
+        cin >> scale;
+        Scena.make_obstacle(Lacze,beg_position,scale,obs_choice);
+        cout << "Element has been added to the scene " << std::endl;
+        break;}
+
+      case 'd':{
+        int i = 0;
+        unsigned int num_obs;
+        // list<shared_ptr<Scene_object>>::iterator it = Scena.Obstacles.begin();
+        list<shared_ptr<Scene_object>>::iterator it = Scena.Objects.begin();
+        cout << "choose which obstacle you want to delete : " << endl;
+        advance(it,2);
+        while( it != Scena.Objects.end()){
+          // advance(it,2);
+          (*it)->show_parameters(i);
+          ++it;
+          ++i;
+        }
+        cin >> num_obs;
+        it = Scena.Objects.begin();
+        advance(it,num_obs+1);
+        (*it)->delete_Obstacle(Lacze);
+        Scena.Objects.erase(it);
+        
+        Lacze.Rysuj();
+        break;}
+
+      case 'a':{
+        choice_drone = 0;
+        while(choice_drone != 1 && choice_drone != 2){
+        cout << "choose which drone would you fly (1,2)" << endl;
+        cin >> choice_drone;
+        if(choice_drone == 1 || choice_drone == 2){
+          if(temp == 0){
+            // Scena.Objects.pop_front();
+            Scena.choose_drone(choice_drone);
+            drn = Scena.getdrone();
+            // (*drn).set_mid((*drn).position[0]);
+            // // (*drn).set_obst((*drn).get_corp());
+            // (*drn).set_name("Drone");
+            // Scena.Objects.push_front(make_shared<Scene_object>(*drn));
+            temp += 1;
+          }
+          else if(temp == 1){
+            // Scena.Objects.pop_front();
+            // Scena.Objects.pop_front();
+            // Scena.Objects.push_front(make_shared<Scene_object>(*drn));
+            Scena.choose_drone(choice_drone);
+            drn = Scena.getdrone();
+            // (*drn).set_mid((*drn).position[0]);
+            // (*drn).set_obst((*drn).get_corp());
+            // (*drn).set_name("Drone");
+            // Scena.Objects.push_front(make_shared<Scene_object>(*drn));
+          }
+          cout << "You have choosen drone at the position: " << endl;
+          // Scena.choose_drone(choice_drone);
+          // drn = Scena.getdrone();
+          // Scena.Obstacles.push_front(make_shared<Scene_object>(*drn));
+          cout << drn->position[0] << endl;}
+          else{
+            cout << "Wrong choice" << endl;
+          }}
+        break;}
+
+      default:{
+        cout << "Wrong Option" << endl;
+      }}
+
+      cout << "Your choice (m-menu)" << endl;
+      cin >> choice;
+
+      if(choice_drone == 1){
+          Scena.GetActiveDrone(0) = *drn;
+        }
+      else if(choice_drone == 2){
+        Scena.GetActiveDrone(1) = *drn;
+        } 
+    }
+
   Dummy d = Dummy();
   return d.doSomething() ? 0 : -1;
 }
+
+

@@ -39,11 +39,25 @@ find_lto(CXX)
 # --------------------------------------------------------------------------------
 set(SOURCES          # All .cpp files in src/
     src/example.cpp
-    src/lacze_do_gnuplota.cpp
+    src/lacze_do_gnuplota
+    src/matrix3.cpp
+    src/vector3.cpp
+    src/Prostopadl.cpp
+    src/Drone.cpp
+    src/GranBlock.cpp
+    src/Block.cpp
+    src/Piramid.cpp
+    src/Mount_with_ridge.cpp
+    src/Cuboid_obstacle.cpp
 )
 set(TESTFILES        # All .cpp files in tests/
-    tests/main.cpp
-    tests/dummy.cpp
+    # tests/main.cpp
+    # tests/dummy.cpp
+    tests/test1.cpp
+    TestMat3.cpp
+    TestVec3.cpp
+    TestVec2.cpp
+    drones_tests.cpp
 )
 set(LIBRARY_NAME program)  # Default name for the library built from src/*.cpp (change if you wish)
 
@@ -54,7 +68,7 @@ set(LIBRARY_NAME program)  # Default name for the library built from src/*.cpp (
 add_library(${LIBRARY_NAME} OBJECT ${SOURCES})
 
 # Lib needs its header files, and users of the library must also see these (PUBLIC). (No change needed)
-target_include_directories(${LIBRARY_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/inc)
+target_include_directories(${LIBRARY_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 # There's also (probably) doctests within the library, so we need to see this as well.
 target_link_libraries(${LIBRARY_NAME} PUBLIC doctest)

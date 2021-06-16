@@ -1,0 +1,87 @@
+[
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/main.dir/app/main.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/app/main.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/app/main.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/example.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/example.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/example.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/lacze_do_gnuplota.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/lacze_do_gnuplota.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/lacze_do_gnuplota.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/matrix3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/matrix3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/matrix3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/vector3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/vector3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/vector3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Prostopadl.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Prostopadl.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Prostopadl.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Drone.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Drone.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Drone.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/GranBlock.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/GranBlock.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/GranBlock.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Block.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Block.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Block.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Piramid.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Piramid.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Piramid.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Mount_with_ridge.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Mount_with_ridge.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Mount_with_ridge.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/program.dir/src/Cuboid_obstacle.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Cuboid_obstacle.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Cuboid_obstacle.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/dummy.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/dummy.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/dummy.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/test1.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/test1.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/test1.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/TestMat3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/TestMat3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/TestMat3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/TestVec3.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/TestVec3.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/TestVec3.cpp"
+},
+{
+  "directory": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/build/tests",
+  "command": "/usr/bin/c++  -DENABLE_DOCTEST_IN_LIBRARY -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/build -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/include -I/home/adam/Programowanie_Obiektowe/zad5_3-259355/external/doctest/doctest  -g   -Wall -Wextra -Wpedantic -Wno-switch-enum -Werror -std=c++17 -o CMakeFiles/unit_tests.dir/drones_tests.cpp.o -c /home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/drones_tests.cpp",
+  "file": "/home/adam/Programowanie_Obiektowe/zad5_3-259355/tests/drones_tests.cpp"
+}
+]
