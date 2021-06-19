@@ -5,7 +5,6 @@
 #include "Piramid.hh"
 #include "Mount_with_ridge.hh"
 #include "Cuboid_obstacle.hh"
-// #include "Scene_object.hh"
 #include <string.h>
 #include <memory>
 #include <list>
@@ -31,8 +30,6 @@ class scena : public Drone{
     unsigned int Active_drone;  ///<Aktywny dron
 
     public:
-
-    // std::list <std::shared_ptr<Scene_object>> Obstacles;   ///<Lista mieszczaca przeszkody
     
     std::list <std::shared_ptr<Scene_object>> Objects;   ///<Lista mieszczaca wszystkie obiekty na scenie
 
@@ -48,15 +45,22 @@ class scena : public Drone{
 
     void Add_drone(Drone tmp){ drones.push_back(tmp);}; ///<Funkcja dodajaca drona do kontenera
 
-///<Funkcja tworzaca sciezke przelotu drona
-void Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Name_of_Path, double lenght_of_path, double angletemp){    
+    /**
+     * Metoda tworzaca sciezke 
+     * @param PzG::LaczeDoGNUPlota &Lacze
+     * @param double choosen_drone
+     * @param const char *Name_of_Path
+     * @param double lenght_of_path
+     * @param double angletemp
+     */
+    void Make_Path(PzG::LaczeDoGNUPlota &Lacze, double choosen_drone, const char *Name_of_Path, double lenght_of_path, double angletemp){    
 
     std::ofstream StrmWy(Name_of_Path); 
 
     if(!StrmWy.is_open()){
         std::cerr << std::endl
-            << "Couldnt open the file: " << Name_of_Path << std::endl
-            << std::endl;
+        << "Couldnt open the file: " << Name_of_Path << std::endl
+        << std::endl;
     }
 
     if(choosen_drone == 1){

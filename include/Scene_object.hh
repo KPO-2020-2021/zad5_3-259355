@@ -104,8 +104,18 @@ class Scene_object{
         return name;
     };
 
+
+    /**
+     * Metoda wirtualna sprawdzajaca czy dron moze ladowac
+     * @param Vector3
+     * @param Prostopadl 
+     * @param unsigned int
+     * @param double 
+     * @param double 
+     * @param Vector3 
+     * @return true or false
+     */                
     virtual bool check_landing_object(Vector3, Prostopadl ,unsigned int ,double , double , Vector3 ){
-        // std::cout << "no tak " << std::endl;
         return false;
     };
 

@@ -17,6 +17,5 @@ bool Piramid::check_landing_object(Vector3,Prostopadl temp,unsigned int ,double 
                     tmp = false;
                 }
         }
-        std::cout << "3" << std::endl;
         return tmp;
     }
