@@ -1,0 +1,78 @@
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ 
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{Diagram3.png}%Class Diagram
+\end{DoxyInlineImage}
+ \hypertarget{index_autotoc_md0}{}\doxysubsection{Building}\label{index_autotoc_md0}
+Build by making a build directory (i.\+e. {\ttfamily build/}), run {\ttfamily cmake} in that dir, and then use {\ttfamily make} to build the desired target.
+
+Requirements\+: cmake, gnuplot, doxygen + dot
+
+Example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{> mkdir build \&\& cd build}
+\DoxyCodeLine{> cmake .. \# options: -\/DCMAKE\_BUILD\_TYPE=[Debug | Coverage | Release], Debug is default}
+\DoxyCodeLine{> make}
+\DoxyCodeLine{> ./main}
+\DoxyCodeLine{> make test      \# Makes and runs the tests.}
+\DoxyCodeLine{> make coverage  \# Generate a coverage report.}
+\DoxyCodeLine{> make doc       \# Generate html documentation.}
+
+\end{DoxyCode}
+
+
+Things to remember\+:
+\begin{DoxyItemize}
+\item changes to zad5\+\_\+3/\+CMake\+Lists.\+txt with new files added, i.\+e.\+:
+\end{DoxyItemize}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\# -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#                         Locate files (change as needed).}}
+\DoxyCodeLine{\textcolor{preprocessor}{\# -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{set(SOURCES          \# All .cpp files in src/}
+\DoxyCodeLine{    src/example.cpp}
+\DoxyCodeLine{    src/lacze\_do\_gnuplota}
+\DoxyCodeLine{    src/matrix3.cpp}
+\DoxyCodeLine{    src/vector3.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_prostopadl}{Prostopadl}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_drone}{Drone}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_gran_block}{GranBlock}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_block}{Block}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{classscena}{scena}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_cuboid__obstacle}{Cuboid\_obstacle}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_piramid}{Piramid}}.cpp}
+\DoxyCodeLine{    src/\mbox{\hyperlink{class_mount__with__ridge}{Mount\_with\_ridge}}.cpp}
+\DoxyCodeLine{)}
+\DoxyCodeLine{set(TESTFILES        \textcolor{preprocessor}{\# All .cpp files in tests/}}
+\DoxyCodeLine{    tests/test1.cpp}
+\DoxyCodeLine{    TestMat3.cpp}
+\DoxyCodeLine{    TestVec3.cpp}
+\DoxyCodeLine{    TestVec2.cpp}
+\DoxyCodeLine{    drones\_tests.cpp}
+\DoxyCodeLine{)}
+\DoxyCodeLine{set(LIBRARY\_NAME zad3)  \textcolor{preprocessor}{\# Default name for the library built from src}\textcolor{comment}{/*.cpp (change if you wish)}}
+
+\end{DoxyCode}
+
+\begin{DoxyItemize}
+\item changes to zad5\+\_\+2/tests/\+CMake\+Lists.\+txt with new files added, i.\+e.\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\# List all files containing tests. (Change as needed)}}
+\DoxyCodeLine{set(TESTFILES        \# All .cpp files in tests/}
+\DoxyCodeLine{    tests/test1.cpp}
+\DoxyCodeLine{    TestMat3.cpp}
+\DoxyCodeLine{    TestVec3.cpp}
+\DoxyCodeLine{    TestVec2.cpp}
+\DoxyCodeLine{    drones\_tests.cpp}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+ The {\ttfamily main.\+cpp} in the folder {\ttfamily tests} is needed. Only there we define {\ttfamily \#define DOCTEST\+\_\+\+CONFIG\+\_\+\+IMPLEMENT\+\_\+\+WITH\+\_\+\+MAIN}.
+\end{DoxyItemize}
+
+The main loop of the program is in the {\ttfamily app} folder. 

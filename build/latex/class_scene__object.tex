@@ -1,0 +1,173 @@
+\hypertarget{class_scene__object}{}\doxysection{Scene\+\_\+object Class Reference}
+\label{class_scene__object}\index{Scene\_object@{Scene\_object}}
+
+
+Klasa Sceny obiektow.  
+
+
+
+
+{\ttfamily \#include $<$Scene\+\_\+object.\+hh$>$}
+
+Inheritance diagram for Scene\+\_\+object\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_scene__object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_scene__object_a07b6d0f79dfcb252768a660f6db0e863}{set\+\_\+mid}} (\mbox{\hyperlink{class_vector}{Vector3}} tmp)
+\item 
+void \mbox{\hyperlink{class_scene__object_a491bbaa40d9af765bf79751fb0ac9b90}{set\+\_\+name}} (std\+::string tmp)
+\item 
+void \mbox{\hyperlink{class_scene__object_a715d55669f0ec091bb3dce052e9ea719}{set\+\_\+obst}} (\mbox{\hyperlink{class_prostopadl}{Prostopadl}} tmp)
+\item 
+void \mbox{\hyperlink{class_scene__object_a8004b3ae5e536634c64204659893983b}{set\+\_\+name\+\_\+of\+\_\+file}} (std\+::string tmp)
+\item 
+void \mbox{\hyperlink{class_scene__object_ae9071b5f39a5c3348a9741571d92e3a0}{show\+\_\+parameters}} (int tmp)
+\item 
+void \mbox{\hyperlink{class_scene__object_af9caa733451e2c8f2f138ea3697a6b6c}{delete\+\_\+\+Obstacle}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze)
+\item 
+\mbox{\hyperlink{class_prostopadl}{Prostopadl}} \mbox{\hyperlink{class_scene__object_a4c359ded3704fede917e23390425b7a8}{get\+\_\+obst}} ()
+\item 
+\mbox{\hyperlink{class_vector}{Vector3}} \mbox{\hyperlink{class_scene__object_a822e3dec01c427818ed0b800da1343ac}{get\+\_\+middle}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_scene__object_acfc36ec51c16aae9b6ca3f2825e09be9}{get\+\_\+name}} ()
+\item 
+\mbox{\Hypertarget{class_scene__object_af25d6067eb0d9a51db52c710fa41d370}\label{class_scene__object_af25d6067eb0d9a51db52c710fa41d370}} 
+virtual bool {\bfseries check\+\_\+landing\+\_\+object} (\mbox{\hyperlink{class_vector}{Vector3}}, \mbox{\hyperlink{class_prostopadl}{Prostopadl}}, unsigned int, double, double, \mbox{\hyperlink{class_vector}{Vector3}})
+\item 
+\mbox{\hyperlink{class_prostopadl}{Prostopadl}} \mbox{\hyperlink{class_scene__object_a2e0451b13e5b3f07ba7c205870fce315}{Init\+\_\+\+The\+\_\+\+Obstacle}} (const char $\ast$Strm\+We, const char $\ast$Strm\+Wy, double num\+\_\+of\+\_\+peak, \mbox{\hyperlink{class_vector}{Vector3}} scale, \mbox{\hyperlink{class_vector}{Vector3}} trans, char choice)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa Sceny obiektow. 
+
+Klasa pozwalajaca operowac na przeszkodach 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene__object_af9caa733451e2c8f2f138ea3697a6b6c}\label{class_scene__object_af9caa733451e2c8f2f138ea3697a6b6c}} 
+\index{Scene\_object@{Scene\_object}!delete\_Obstacle@{delete\_Obstacle}}
+\index{delete\_Obstacle@{delete\_Obstacle}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{delete\_Obstacle()}{delete\_Obstacle()}}
+{\footnotesize\ttfamily void Scene\+\_\+object\+::delete\+\_\+\+Obstacle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda usuwajaca plik przeszkody 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}}} & \&Lacze \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene__object_a822e3dec01c427818ed0b800da1343ac}\label{class_scene__object_a822e3dec01c427818ed0b800da1343ac}} 
+\index{Scene\_object@{Scene\_object}!get\_middle@{get\_middle}}
+\index{get\_middle@{get\_middle}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{get\_middle()}{get\_middle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector3}} Scene\+\_\+object\+::get\+\_\+middle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda dajaca dostep do pozycji srodka przeszkody \begin{DoxyReturn}{Returns}
+Vector3 middle\+\_\+pos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene__object_acfc36ec51c16aae9b6ca3f2825e09be9}\label{class_scene__object_acfc36ec51c16aae9b6ca3f2825e09be9}} 
+\index{Scene\_object@{Scene\_object}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string Scene\+\_\+object\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda dajaca dostpe do typu przeszkody \begin{DoxyReturn}{Returns}
+std\+::string name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene__object_a4c359ded3704fede917e23390425b7a8}\label{class_scene__object_a4c359ded3704fede917e23390425b7a8}} 
+\index{Scene\_object@{Scene\_object}!get\_obst@{get\_obst}}
+\index{get\_obst@{get\_obst}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{get\_obst()}{get\_obst()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_prostopadl}{Prostopadl}} Scene\+\_\+object\+::get\+\_\+obst (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda dajaca dostep do wierzcholkow przeszkody \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_prostopadl}{Prostopadl}} obst 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene__object_a2e0451b13e5b3f07ba7c205870fce315}\label{class_scene__object_a2e0451b13e5b3f07ba7c205870fce315}} 
+\index{Scene\_object@{Scene\_object}!Init\_The\_Obstacle@{Init\_The\_Obstacle}}
+\index{Init\_The\_Obstacle@{Init\_The\_Obstacle}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{Init\_The\_Obstacle()}{Init\_The\_Obstacle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_prostopadl}{Prostopadl}} Scene\+\_\+object\+::\+Init\+\_\+\+The\+\_\+\+Obstacle (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Strm\+We,  }\item[{const char $\ast$}]{Strm\+Wy,  }\item[{double}]{num\+\_\+of\+\_\+peak,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{scale,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{trans,  }\item[{char}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Funkcja inicjująca tworzenie przeszkody poprzez odpowiednie zmiany wierzchołkow i zapisanie ich w pliku 
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$\+Strm\+We \\
+\hline
+{\em const} & char $\ast$\+Strm\+Wy \\
+\hline
+{\em double} & num\+\_\+of\+\_\+peak \\
+\hline
+{\em Vector3} & scale \\
+\hline
+{\em Vector3} & trans \\
+\hline
+{\em char} & choice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_prostopadl}{Prostopadl}} temp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_scene__object_a07b6d0f79dfcb252768a660f6db0e863}\label{class_scene__object_a07b6d0f79dfcb252768a660f6db0e863}} 
+\index{Scene\_object@{Scene\_object}!set\_mid@{set\_mid}}
+\index{set\_mid@{set\_mid}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{set\_mid()}{set\_mid()}}
+{\footnotesize\ttfamily void Scene\+\_\+object\+::set\+\_\+mid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda ustawiajaca pozycje srodkowa przeszkody 
+\begin{DoxyParams}{Parameters}
+{\em Vector3} & tmp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene__object_a491bbaa40d9af765bf79751fb0ac9b90}\label{class_scene__object_a491bbaa40d9af765bf79751fb0ac9b90}} 
+\index{Scene\_object@{Scene\_object}!set\_name@{set\_name}}
+\index{set\_name@{set\_name}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{set\_name()}{set\_name()}}
+{\footnotesize\ttfamily void Scene\+\_\+object\+::set\+\_\+name (\begin{DoxyParamCaption}\item[{std\+::string}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda ustawiajaca nazwe typu przeszkody 
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & tmp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene__object_a8004b3ae5e536634c64204659893983b}\label{class_scene__object_a8004b3ae5e536634c64204659893983b}} 
+\index{Scene\_object@{Scene\_object}!set\_name\_of\_file@{set\_name\_of\_file}}
+\index{set\_name\_of\_file@{set\_name\_of\_file}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{set\_name\_of\_file()}{set\_name\_of\_file()}}
+{\footnotesize\ttfamily void Scene\+\_\+object\+::set\+\_\+name\+\_\+of\+\_\+file (\begin{DoxyParamCaption}\item[{std\+::string}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda ustawiajaca pozycje srodkowa przeszkody 
+\begin{DoxyParams}{Parameters}
+{\em Vector3} & tmp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene__object_a715d55669f0ec091bb3dce052e9ea719}\label{class_scene__object_a715d55669f0ec091bb3dce052e9ea719}} 
+\index{Scene\_object@{Scene\_object}!set\_obst@{set\_obst}}
+\index{set\_obst@{set\_obst}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{set\_obst()}{set\_obst()}}
+{\footnotesize\ttfamily void Scene\+\_\+object\+::set\+\_\+obst (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_prostopadl}{Prostopadl}}}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda ustawiajaca wierzcholki przeszkody 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_prostopadl}{Prostopadl}}} & tmp \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene__object_ae9071b5f39a5c3348a9741571d92e3a0}\label{class_scene__object_ae9071b5f39a5c3348a9741571d92e3a0}} 
+\index{Scene\_object@{Scene\_object}!show\_parameters@{show\_parameters}}
+\index{show\_parameters@{show\_parameters}!Scene\_object@{Scene\_object}}
+\doxysubsubsection{\texorpdfstring{show\_parameters()}{show\_parameters()}}
+{\footnotesize\ttfamily void Scene\+\_\+object\+::show\+\_\+parameters (\begin{DoxyParamCaption}\item[{int}]{tmp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda wyswietlajaca parametry przeszkody nazwe, numer, pozycje srodkowa 
+\begin{DoxyParams}{Parameters}
+{\em int} & tmp \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/Scene\+\_\+object.\+hh\end{DoxyCompactItemize}

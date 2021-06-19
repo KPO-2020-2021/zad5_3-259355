@@ -1,0 +1,101 @@
+\hypertarget{classscena}{}\doxysection{scena Class Reference}
+\label{classscena}\index{scena@{scena}}
+
+
+Klasa sceny.  
+
+
+
+
+{\ttfamily \#include $<$scena.\+hh$>$}
+
+Inheritance diagram for scena\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{classscena}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classscena_a8d862f860ebfcd59cac680ae48ce1a4e}\label{classscena_a8d862f860ebfcd59cac680ae48ce1a4e}} 
+\mbox{\hyperlink{class_drone}{Drone}} $\ast$ {\bfseries getdrone} ()
+\item 
+\mbox{\Hypertarget{classscena_a302c09d08ed004ef693ccdba714c5049}\label{classscena_a302c09d08ed004ef693ccdba714c5049}} 
+unsigned int \mbox{\hyperlink{classscena_a302c09d08ed004ef693ccdba714c5049}{get\+\_\+active\+\_\+num}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja dajaca dostep do danego drona. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classscena_aff20b3735869e5aa22768b74e8840768}\label{classscena_aff20b3735869e5aa22768b74e8840768}} 
+std\+::vector$<$ \mbox{\hyperlink{class_drone}{Drone}} $>$ {\bfseries get\+\_\+drone\+\_\+vec} ()
+\item 
+\mbox{\Hypertarget{classscena_a366feddb1dc2cfff3edef389791e333d}\label{classscena_a366feddb1dc2cfff3edef389791e333d}} 
+\mbox{\hyperlink{class_drone}{Drone}} {\bfseries Get\+Active\+Drone} (int ind)
+\item 
+\mbox{\Hypertarget{classscena_a602ff71155273b3f90af1d916b72c4ec}\label{classscena_a602ff71155273b3f90af1d916b72c4ec}} 
+void {\bfseries choose\+\_\+drone} (unsigned int choice)
+\item 
+\mbox{\Hypertarget{classscena_a7f4aab95ca9de924bc6e033c4fd58d69}\label{classscena_a7f4aab95ca9de924bc6e033c4fd58d69}} 
+void \mbox{\hyperlink{classscena_a7f4aab95ca9de924bc6e033c4fd58d69}{Add\+\_\+drone}} (\mbox{\hyperlink{class_drone}{Drone}} tmp)
+\begin{DoxyCompactList}\small\item\em Funkcja zwracajaca index wybranego drona. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscena_a44f8a30fd55ebd1fb763369f950b7f2f}{Make\+\_\+\+Path}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, double choosen\+\_\+drone, const char $\ast$Name\+\_\+of\+\_\+\+Path, double lenght\+\_\+of\+\_\+path, double angletemp)
+\begin{DoxyCompactList}\small\item\em Funkcja dodajaca drona do kontenera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classscena_a649200edce9dfb8cba11398e29276c3b}{make\+\_\+obstacle}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, \mbox{\hyperlink{class_vector}{Vector3}} begin\+\_\+position, \mbox{\hyperlink{class_vector}{Vector3}} scale, char choice)
+\item 
+void \mbox{\hyperlink{classscena_aa4254ace01f98191d91b44e399d22370}{Initiation\+\_\+begin\+\_\+obstacles}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classscena_af1f1148983aaf0e46ebeb4f7500ca3c5}\label{classscena_af1f1148983aaf0e46ebeb4f7500ca3c5}} 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_scene__object}{Scene\+\_\+object}} $>$ $>$ \mbox{\hyperlink{classscena_af1f1148983aaf0e46ebeb4f7500ca3c5}{Objects}}
+\begin{DoxyCompactList}\small\item\em Lista mieszczaca wszystkie obiekty na scenie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa sceny. 
+
+Klasa pozwalajaca operowac na odpowiednich figurach 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classscena_aa4254ace01f98191d91b44e399d22370}\label{classscena_aa4254ace01f98191d91b44e399d22370}} 
+\index{scena@{scena}!Initiation\_begin\_obstacles@{Initiation\_begin\_obstacles}}
+\index{Initiation\_begin\_obstacles@{Initiation\_begin\_obstacles}!scena@{scena}}
+\doxysubsubsection{\texorpdfstring{Initiation\_begin\_obstacles()}{Initiation\_begin\_obstacles()}}
+{\footnotesize\ttfamily void scena\+::\+Initiation\+\_\+begin\+\_\+obstacles (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda Inicjujaca przeszkody poczatkowe 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}}} & \&Lacze \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classscena_a649200edce9dfb8cba11398e29276c3b}\label{classscena_a649200edce9dfb8cba11398e29276c3b}} 
+\index{scena@{scena}!make\_obstacle@{make\_obstacle}}
+\index{make\_obstacle@{make\_obstacle}!scena@{scena}}
+\doxysubsubsection{\texorpdfstring{make\_obstacle()}{make\_obstacle()}}
+{\footnotesize\ttfamily void scena\+::make\+\_\+obstacle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{begin\+\_\+position,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{scale,  }\item[{char}]{choice }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Metoda Inicjujaca przeszkody 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}}} & \&Lacze \\
+\hline
+{\em Vector3} & begin\+\_\+position \\
+\hline
+{\em Vector3} & scale \\
+\hline
+{\em char} & choice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classscena_a44f8a30fd55ebd1fb763369f950b7f2f}\label{classscena_a44f8a30fd55ebd1fb763369f950b7f2f}} 
+\index{scena@{scena}!Make\_Path@{Make\_Path}}
+\index{Make\_Path@{Make\_Path}!scena@{scena}}
+\doxysubsubsection{\texorpdfstring{Make\_Path()}{Make\_Path()}}
+{\footnotesize\ttfamily void scena\+::\+Make\+\_\+\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&}]{Lacze,  }\item[{double}]{choosen\+\_\+drone,  }\item[{const char $\ast$}]{Name\+\_\+of\+\_\+\+Path,  }\item[{double}]{lenght\+\_\+of\+\_\+path,  }\item[{double}]{angletemp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja dodajaca drona do kontenera. 
+
+Funkcja tworzaca sciezke przelotu drona 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/scena.\+hh\end{DoxyCompactItemize}
