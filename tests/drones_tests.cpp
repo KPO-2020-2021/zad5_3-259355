@@ -5,45 +5,45 @@
 #include "scena.hh"
 
 TEST_CASE("Drone flight"){
-    PzG::LaczeDoGNUPlota Lacze;
-    Lacze.ZmienTrybRys(PzG::TR_3D);
-  Lacze.Inicjalizuj();
-  Lacze.UstawZakresX(0,200);
-  Lacze.UstawZakresY(0,200);
-  Lacze.UstawZakresZ(0,120);
+//     PzG::LaczeDoGNUPlota Lacze;
+//     Lacze.ZmienTrybRys(PzG::TR_3D);
+//   Lacze.Inicjalizuj();
+//   Lacze.UstawZakresX(0,200);
+//   Lacze.UstawZakresY(0,200);
+//   Lacze.UstawZakresZ(0,120);
 
-  Lacze.UstawRotacjeXZ(64,65);
-   //-------------------------------------------------------
-   //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadl.dat"
-   //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane
-   //  na dwa sposoby:
-   //   1. Rysowane jako linia ciagl o grubosci 2 piksele
-   //
-  Lacze.DodajNazwePliku(PLASZCZYZNA_WZ);
+//   Lacze.UstawRotacjeXZ(64,65);
+//    //-------------------------------------------------------
+//    //  Wspolrzedne wierzcholkow beda zapisywane w pliku "Prostopadl.dat"
+//    //  Ponizsze metody powoduja, ze dane z pliku beda wizualizowane
+//    //  na dwa sposoby:
+//    //   1. Rysowane jako linia ciagl o grubosci 2 piksele
+//    //
+//   Lacze.DodajNazwePliku(PLASZCZYZNA_WZ);
   
-  PzG::InfoPlikuDoRysowania *col_corp = &Lacze.DodajNazwePliku(SZESCIAN_ZM);
-  PzG::InfoPlikuDoRysowania *col_rot1 = &Lacze.DodajNazwePliku(ROTORY_1);
-  PzG::InfoPlikuDoRysowania *col_rot2 = &Lacze.DodajNazwePliku(ROTORY_2);
-  PzG::InfoPlikuDoRysowania *col_rot3 = &Lacze.DodajNazwePliku(ROTORY_3);
-  PzG::InfoPlikuDoRysowania *col_rot4 = &Lacze.DodajNazwePliku(ROTORY_4);
+//   PzG::InfoPlikuDoRysowania *col_corp = &Lacze.DodajNazwePliku(SZESCIAN_ZM);
+//   PzG::InfoPlikuDoRysowania *col_rot1 = &Lacze.DodajNazwePliku(ROTORY_1);
+//   PzG::InfoPlikuDoRysowania *col_rot2 = &Lacze.DodajNazwePliku(ROTORY_2);
+//   PzG::InfoPlikuDoRysowania *col_rot3 = &Lacze.DodajNazwePliku(ROTORY_3);
+//   PzG::InfoPlikuDoRysowania *col_rot4 = &Lacze.DodajNazwePliku(ROTORY_4);
 
-  col_corp->ZmienKolor(1);
-  col_rot1->ZmienKolor(2);
-  col_rot2->ZmienKolor(2);
-  col_rot3->ZmienKolor(2);
-  col_rot4->ZmienKolor(2);
+//   col_corp->ZmienKolor(1);
+//   col_rot1->ZmienKolor(2);
+//   col_rot2->ZmienKolor(2);
+//   col_rot3->ZmienKolor(2);
+//   col_rot4->ZmienKolor(2);
 
-  PzG::InfoPlikuDoRysowania *col_corp_v2 = &Lacze.DodajNazwePliku(SZESCIAN_ZM_V2);
-  PzG::InfoPlikuDoRysowania *col_rot1_v2 = &Lacze.DodajNazwePliku(ROTORY_1_V2);
-  PzG::InfoPlikuDoRysowania *col_rot2_v2 = &Lacze.DodajNazwePliku(ROTORY_2_V2);
-  PzG::InfoPlikuDoRysowania *col_rot3_v2 = &Lacze.DodajNazwePliku(ROTORY_3_V2);
-  PzG::InfoPlikuDoRysowania *col_rot4_v2 = &Lacze.DodajNazwePliku(ROTORY_4_V2);
+//   PzG::InfoPlikuDoRysowania *col_corp_v2 = &Lacze.DodajNazwePliku(SZESCIAN_ZM_V2);
+//   PzG::InfoPlikuDoRysowania *col_rot1_v2 = &Lacze.DodajNazwePliku(ROTORY_1_V2);
+//   PzG::InfoPlikuDoRysowania *col_rot2_v2 = &Lacze.DodajNazwePliku(ROTORY_2_V2);
+//   PzG::InfoPlikuDoRysowania *col_rot3_v2 = &Lacze.DodajNazwePliku(ROTORY_3_V2);
+//   PzG::InfoPlikuDoRysowania *col_rot4_v2 = &Lacze.DodajNazwePliku(ROTORY_4_V2);
 
-  col_corp_v2->ZmienKolor(3);
-  col_rot1_v2->ZmienKolor(4);
-  col_rot2_v2->ZmienKolor(4);
-  col_rot3_v2->ZmienKolor(4);
-  col_rot4_v2->ZmienKolor(4);
+//   col_corp_v2->ZmienKolor(3);
+//   col_rot1_v2->ZmienKolor(4);
+//   col_rot2_v2->ZmienKolor(4);
+//   col_rot3_v2->ZmienKolor(4);
+//   col_rot4_v2->ZmienKolor(4);
     Drone drone1;
     double arg1[] = {20,20,0};
     drone1.position[0] = Vector3(arg1);
@@ -69,7 +69,7 @@ TEST_CASE("Drone flight"){
     for(; angletemp <= angle; angletemp += 5 ){
             drone1.Engage2(angletemp,drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1, 2);
             usleep(100000);
-            Lacze.Rysuj();
+            // Lacze.Rysuj();
         }
         angletemp -= 5;        
         double x_position = 20;
@@ -88,7 +88,6 @@ TEST_CASE("Drone flight"){
         y_of_turn = drone1.y_of_end(drone1.position[0][1],angle,lenght);
         y_of_turn = (y_of_turn - drone1.position[0][1])/60;
 
-        std::cout << "Going forward ..." << std::endl;
         for(int i = 0; i <= 60; drone1.position[0][0] += x_of_turn, drone1.position[0][1] += y_of_turn, ++i){
             step = 3;
             drone1.Engage2(angle,drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1, step);
@@ -114,11 +113,12 @@ TEST_CASE("Drone flight"){
     CHECK((drone1.position[1][2] - z_position) <= MIN_DIFF);
     }
     SUBCASE("Checking amount of used vectors"){
-        double vec_in_use = 22486;
-        double vec_used = 185943;
+        double vec_in_use = 21463;
+        double vec_used = 171672;
     CHECK(drone1.position[0].amount_active_vectors() == vec_in_use);
     CHECK(drone1.position[0].amount_of_all_vectors() == vec_used);
     }
+    
 }
 
 TEST_CASE("Inheritance of functions"){

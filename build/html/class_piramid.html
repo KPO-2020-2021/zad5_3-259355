@@ -89,8 +89,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8ea843617b820afade1228b6c4acb685"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f33ee4c2d175a65344e252b63fb1f33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piramid.html#a5f33ee4c2d175a65344e252b63fb1f33">Piramid</a> (<a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, <a class="el" href="class_vector.html">Vector3</a> begin_position, <a class="el" href="class_vector.html">Vector3</a> scale)</td></tr>
 <tr class="separator:a5f33ee4c2d175a65344e252b63fb1f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada7180b7153f45434266b729ed865b57"><td class="memItemLeft" align="right" valign="top"><a id="ada7180b7153f45434266b729ed865b57"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_landing_object</b> (<a class="el" href="class_vector.html">Vector3</a>, <a class="el" href="class_prostopadl.html">Prostopadl</a> temp, unsigned int, double x_gr1, double x_gr2, <a class="el" href="class_vector.html">Vector3</a> position) override</td></tr>
+<tr class="memitem:ada7180b7153f45434266b729ed865b57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_piramid.html#ada7180b7153f45434266b729ed865b57">check_landing_object</a> (<a class="el" href="class_vector.html">Vector3</a>, <a class="el" href="class_prostopadl.html">Prostopadl</a> temp, unsigned int, double x_gr1, double x_gr2, <a class="el" href="class_vector.html">Vector3</a> position) override</td></tr>
 <tr class="separator:ada7180b7153f45434266b729ed865b57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_scene__object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_scene__object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_scene__object.html">Scene_object</a></td></tr>
 <tr class="memitem:a07b6d0f79dfcb252768a660f6db0e863 inherit pub_methods_class_scene__object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene__object.html#a07b6d0f79dfcb252768a660f6db0e863">set_mid</a> (<a class="el" href="class_vector.html">Vector3</a> tmp)</td></tr>
@@ -169,6 +168,80 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_landing_object<
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ada7180b7153f45434266b729ed865b57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada7180b7153f45434266b729ed865b57">&#9670;&nbsp;</a></span>check_landing_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Piramid::check_landing_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector3</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_prostopadl.html">Prostopadl</a>&#160;</td>
+          <td class="paramname"><em>temp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x_gr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x_gr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="">Metoda wirtualna sprawdzajaca czy dron moze ladowac (Piramida) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Vector3</td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="class_prostopadl.html" title="Klasa Prostopadloscianu.">Prostopadl</a></td><td>temp </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int </td></tr>
+    <tr><td class="paramname">double</td><td>x_gr1 </td></tr>
+    <tr><td class="paramname">double</td><td>x_gr2 </td></tr>
+    <tr><td class="paramname">Vector3</td><td>position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true or false </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_scene__object.html#af25d6067eb0d9a51db52c710fa41d370">Scene_object</a>.</p>
+
+</div>
+</div>
 <a id="a8ea843617b820afade1228b6c4acb685"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8ea843617b820afade1228b6c4acb685">&#9670;&nbsp;</a></span>Piramid_Init()</h2>
 

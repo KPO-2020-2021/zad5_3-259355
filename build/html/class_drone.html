@@ -105,11 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a82de4a20121403cd49a8225d7e55a245"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf784d4ede9a7b9b2965cacb78207a2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#adf784d4ede9a7b9b2965cacb78207a2c">GoDownAndUp</a> (double up_down, double angletemp, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</td></tr>
 <tr class="separator:adf784d4ede9a7b9b2965cacb78207a2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8241b7eec63e9486befedc638709869c"><td class="memItemLeft" align="right" valign="top"><a id="a8241b7eec63e9486befedc638709869c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_landing</b> (unsigned int num_drone, std::list&lt; std::shared_ptr&lt; <a class="el" href="class_scene__object.html">Scene_object</a> &gt;&gt; Objects)</td></tr>
+<tr class="memitem:a8241b7eec63e9486befedc638709869c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#a8241b7eec63e9486befedc638709869c">check_landing</a> (unsigned int num_drone, std::list&lt; std::shared_ptr&lt; <a class="el" href="class_scene__object.html">Scene_object</a> &gt;&gt; Objects)</td></tr>
 <tr class="separator:a8241b7eec63e9486befedc638709869c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe18b67f0dc8fd6c28dd4218aadbb825"><td class="memItemLeft" align="right" valign="top"><a id="afe18b67f0dc8fd6c28dd4218aadbb825"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_landing_object</b> (<a class="el" href="class_vector.html">Vector3</a> middle, <a class="el" href="class_prostopadl.html">Prostopadl</a>, unsigned int, double, double, <a class="el" href="class_vector.html">Vector3</a> <a class="el" href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">position</a>) override</td></tr>
+<tr class="memitem:afe18b67f0dc8fd6c28dd4218aadbb825"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drone.html#afe18b67f0dc8fd6c28dd4218aadbb825">check_landing_object</a> (<a class="el" href="class_vector.html">Vector3</a> middle, <a class="el" href="class_prostopadl.html">Prostopadl</a>, unsigned int, double, double, <a class="el" href="class_vector.html">Vector3</a> <a class="el" href="class_drone.html#afc0021a1a1147a0e7537847f657a1660">position</a>) override</td></tr>
 <tr class="separator:afe18b67f0dc8fd6c28dd4218aadbb825"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_block"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_block')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_block.html">Block</a></td></tr>
 <tr class="memitem:abb0da7e6a60219d7cfda1e23dfdd1b79 inherit pub_methods_class_block"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_block.html#abb0da7e6a60219d7cfda1e23dfdd1b79">Block</a> (const char *StrmWe, const char *StrmWy, <a class="el" href="class_vector.html">Vector3</a> scale, <a class="el" href="class_vector.html">Vector3</a> trans, double angle)</td></tr>
@@ -211,6 +209,124 @@ Public Attributes</h2></td></tr>
 <div class="textblock"><p class="">Klasa Drona. </p>
 <p class="">Klasa pozwalajaca operowac na dronie Klasa dziedziczy po klasie <a class="el" href="class_block.html" title="Klasa Block.">Block</a> oraz <a class="el" href="class_prostopadl.html" title="Klasa Prostopadloscianu.">Prostopadl</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8241b7eec63e9486befedc638709869c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8241b7eec63e9486befedc638709869c">&#9670;&nbsp;</a></span>check_landing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Drone::check_landing </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>num_drone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::list&lt; std::shared_ptr&lt; <a class="el" href="class_scene__object.html">Scene_object</a> &gt;&gt;&#160;</td>
+          <td class="paramname"><em>Objects</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="">Metoda wirtualna sprawdzajaca czy dron moze ladowac </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int num_drone </td></tr>
+    <tr><td class="paramname">std::list&lt;std::shared_ptr&lt;Scene_object&gt;&gt;</td><td>Objects </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true or false </dd></dl>
+
+</div>
+</div>
+<a id="afe18b67f0dc8fd6c28dd4218aadbb825"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe18b67f0dc8fd6c28dd4218aadbb825">&#9670;&nbsp;</a></span>check_landing_object()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Drone::check_landing_object </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>middle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_prostopadl.html">Prostopadl</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector3</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p class="">Metoda wirtualna sprawdzajaca czy dron moze ladowac (Dron) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Vector3</td><td></td></tr>
+    <tr><td class="paramname"><a class="el" href="class_prostopadl.html" title="Klasa Prostopadloscianu.">Prostopadl</a></td><td></td></tr>
+    <tr><td class="paramname">unsigned</td><td>int </td></tr>
+    <tr><td class="paramname">double</td><td></td></tr>
+    <tr><td class="paramname">double</td><td></td></tr>
+    <tr><td class="paramname">Vector3</td><td>position </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true or false </dd></dl>
+
+<p>Reimplemented from <a class="el" href="class_scene__object.html#af25d6067eb0d9a51db52c710fa41d370">Scene_object</a>.</p>
+
+</div>
+</div>
 <a id="a9f4765c4081194c2066960e95c51eb20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9f4765c4081194c2066960e95c51eb20">&#9670;&nbsp;</a></span>Engage2()</h2>
 

@@ -6,6 +6,30 @@
 
 #IncludeRegexTransform: 
 
+../include/Block.hh
+GranBlock.hh
+../include/GranBlock.hh
+Vector3.hh
+../include/Vector3.hh
+matrix3.hh
+../include/matrix3.hh
+
+../include/Drone.hh
+Prostopadl.hh
+../include/Prostopadl.hh
+Block.hh
+../include/Block.hh
+Vector3.hh
+../include/Vector3.hh
+iomanip
+-
+Scene_object.hh
+../include/Scene_object.hh
+memory
+-
+list
+-
+
 ../include/GranBlock.hh
 Vector3.hh
 ../include/Vector3.hh
@@ -25,10 +49,6 @@ unistd.h
 -
 vector
 -
-
-../include/Piramid.hh
-Scene_object.hh
-../include/Scene_object.hh
 
 ../include/Prostopadl.hh
 matrix3.hh
@@ -108,7 +128,7 @@ math.h
 iomanip
 -
 
-/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Piramid.cpp
-Piramid.hh
-/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Piramid.hh
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Drone.cpp
+Drone.hh
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Drone.hh
 

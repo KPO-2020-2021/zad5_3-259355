@@ -22,8 +22,7 @@ void \mbox{\hyperlink{class_cuboid__obstacle_a2202576c759e2c49e1d8659897cf1412}{
 \item 
 \mbox{\hyperlink{class_cuboid__obstacle_ac0635e7aa267ebd967a260fc9b002f95}{Cuboid\+\_\+obstacle}} (\mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, \mbox{\hyperlink{class_vector}{Vector3}} begin\+\_\+position, \mbox{\hyperlink{class_vector}{Vector3}} scale)
 \item 
-\mbox{\Hypertarget{class_cuboid__obstacle_ac10252f90fa6b9a7b6e67d5f38ceab3c}\label{class_cuboid__obstacle_ac10252f90fa6b9a7b6e67d5f38ceab3c}} 
-bool {\bfseries check\+\_\+landing\+\_\+object} (\mbox{\hyperlink{class_vector}{Vector3}}, \mbox{\hyperlink{class_prostopadl}{Prostopadl}} temp, unsigned int, double x\+\_\+gr1, double x\+\_\+gr2, \mbox{\hyperlink{class_vector}{Vector3}} position) override
+bool \mbox{\hyperlink{class_cuboid__obstacle_ac10252f90fa6b9a7b6e67d5f38ceab3c}{check\+\_\+landing\+\_\+object}} (\mbox{\hyperlink{class_vector}{Vector3}}, \mbox{\hyperlink{class_prostopadl}{Prostopadl}} temp, unsigned int, double x\+\_\+gr1, double x\+\_\+gr2, \mbox{\hyperlink{class_vector}{Vector3}} position) override
 \end{DoxyCompactItemize}
 
 
@@ -51,6 +50,34 @@ Metoda tworzaca odpowiednio zmieniony prostopadloscian
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_cuboid__obstacle_ac10252f90fa6b9a7b6e67d5f38ceab3c}\label{class_cuboid__obstacle_ac10252f90fa6b9a7b6e67d5f38ceab3c}} 
+\index{Cuboid\_obstacle@{Cuboid\_obstacle}!check\_landing\_object@{check\_landing\_object}}
+\index{check\_landing\_object@{check\_landing\_object}!Cuboid\_obstacle@{Cuboid\_obstacle}}
+\doxysubsubsection{\texorpdfstring{check\_landing\_object()}{check\_landing\_object()}}
+{\footnotesize\ttfamily bool Cuboid\+\_\+obstacle\+::check\+\_\+landing\+\_\+object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{,  }\item[{\mbox{\hyperlink{class_prostopadl}{Prostopadl}}}]{temp,  }\item[{unsigned int}]{,  }\item[{double}]{x\+\_\+gr1,  }\item[{double}]{x\+\_\+gr2,  }\item[{\mbox{\hyperlink{class_vector}{Vector3}}}]{position }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Metoda wirtualna sprawdzajaca czy dron moze ladowac (Plaskowyz) 
+\begin{DoxyParams}{Parameters}
+{\em Vector3} & \\
+\hline
+{\em \mbox{\hyperlink{class_prostopadl}{Prostopadl}}} & temp \\
+\hline
+{\em unsigned} & int \\
+\hline
+{\em double} & x\+\_\+gr1 \\
+\hline
+{\em double} & x\+\_\+gr2 \\
+\hline
+{\em Vector3} & position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_scene__object_af25d6067eb0d9a51db52c710fa41d370}{Scene\+\_\+object}}.
+
 \mbox{\Hypertarget{class_cuboid__obstacle_a2202576c759e2c49e1d8659897cf1412}\label{class_cuboid__obstacle_a2202576c759e2c49e1d8659897cf1412}} 
 \index{Cuboid\_obstacle@{Cuboid\_obstacle}!Cuboid\_Init@{Cuboid\_Init}}
 \index{Cuboid\_Init@{Cuboid\_Init}!Cuboid\_obstacle@{Cuboid\_obstacle}}

@@ -81,6 +81,14 @@ Building</h2>
 </div><!-- fragment --><p class="">Things to remember:</p><ul>
 <li>changes to zad5_3/CMakeLists.txt with new files added, i.e.:</li>
 </ul>
+<h2><a class="anchor" id="autotoc_md1"></a>
+ATTENTION</h2>
+<p class="">Niestety z powodu blednego zapisania diagramy nie bylem w stanie dodawac do niego niektorych funkcji dlatego wprowadzam je tu. Odpowiadaja one za przelot drona oraz zwiad</p>
+<p class="">Klasa <a class="el" href="class_drone.html" title="Klasa Drona.">Drone</a></p>
+<p class="">void Scouting(double angle, PzG::LaczeDoGNUPlota &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</p>
+<p class="">void GoForward(double angletemp, double lenght_of_path,PzG::LaczeDoGNUPlota &amp;Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[]);</p>
+<p class="">void Orientation(double angle, double angletemp, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[];</p>
+<p class="">void GoDownAndUp(double up_down,double angletemp, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[];</p>
 <div class="fragment"><div class="line"><span class="preprocessor"># --------------------------------------------------------------------------------</span></div>
 <div class="line"><span class="preprocessor">#                         Locate files (change as needed).</span></div>
 <div class="line"><span class="preprocessor"># --------------------------------------------------------------------------------</span></div>
@@ -105,7 +113,7 @@ Building</h2>
 <div class="line">    TestVec2.cpp</div>
 <div class="line">    drones_tests.cpp</div>
 <div class="line">)</div>
-<div class="line">set(LIBRARY_NAME zad3)  <span class="preprocessor"># Default name for the library built from src</span><span class="comment">/*.cpp (change if you wish)</span></div>
+<div class="line">set(LIBRARY_NAME zad5_3)  <span class="preprocessor"># Default name for the library built from src</span><span class="comment">/*.cpp (change if you wish)</span></div>
 <div class="ttc" id="aclass_block_html"><div class="ttname"><a href="class_block.html">Block</a></div><div class="ttdoc">Klasa Block.</div><div class="ttdef"><b>Definition:</b> Block.hh:15</div></div>
 <div class="ttc" id="aclass_cuboid__obstacle_html"><div class="ttname"><a href="class_cuboid__obstacle.html">Cuboid_obstacle</a></div><div class="ttdoc">Klasa Cuboid.</div><div class="ttdef"><b>Definition:</b> Cuboid_obstacle.hh:12</div></div>
 <div class="ttc" id="aclass_drone_html"><div class="ttname"><a href="class_drone.html">Drone</a></div><div class="ttdoc">Klasa Drona.</div><div class="ttdef"><b>Definition:</b> Drone.hh:23</div></div>
@@ -113,9 +121,9 @@ Building</h2>
 <div class="ttc" id="aclass_mount__with__ridge_html"><div class="ttname"><a href="class_mount__with__ridge.html">Mount_with_ridge</a></div><div class="ttdoc">Klasa Mount_with_ridge.</div><div class="ttdef"><b>Definition:</b> Mount_with_ridge.hh:12</div></div>
 <div class="ttc" id="aclass_piramid_html"><div class="ttname"><a href="class_piramid.html">Piramid</a></div><div class="ttdoc">Klasa Piramidy.</div><div class="ttdef"><b>Definition:</b> Piramid.hh:13</div></div>
 <div class="ttc" id="aclass_prostopadl_html"><div class="ttname"><a href="class_prostopadl.html">Prostopadl</a></div><div class="ttdoc">Klasa Prostopadloscianu.</div><div class="ttdef"><b>Definition:</b> Prostopadl.hh:25</div></div>
-<div class="ttc" id="aclassscena_html"><div class="ttname"><a href="classscena.html">scena</a></div><div class="ttdoc">Klasa sceny.</div><div class="ttdef"><b>Definition:</b> scena.hh:25</div></div>
+<div class="ttc" id="aclassscena_html"><div class="ttname"><a href="classscena.html">scena</a></div><div class="ttdoc">Klasa sceny.</div><div class="ttdef"><b>Definition:</b> scena.hh:24</div></div>
 </div><!-- fragment --><ul>
-<li>changes to zad5_2/tests/CMakeLists.txt with new files added, i.e.: <div class="fragment"><div class="line"><span class="preprocessor"># List all files containing tests. (Change as needed)</span></div>
+<li>changes to zad5_3/tests/CMakeLists.txt with new files added, i.e.: <div class="fragment"><div class="line"><span class="preprocessor"># List all files containing tests. (Change as needed)</span></div>
 <div class="line">set(TESTFILES        # All .cpp files in tests/</div>
 <div class="line">    tests/test1.cpp</div>
 <div class="line">    TestMat3.cpp</div>

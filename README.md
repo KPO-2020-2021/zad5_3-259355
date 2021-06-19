@@ -20,6 +20,20 @@ Example:
 Things to remember:
 * changes to zad5_3/CMakeLists.txt with new files added, i.e.:
 
+## ATTENTION
+Niestety z powodu blednego zapisania diagramy nie bylem w stanie dodawac do niego niektorych funkcji 
+dlatego wprowadzam je tu. Odpowiadaja one za przelot drona oraz zwiad 
+
+Klasa Drone
+
+void Scouting(double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])
+
+void GoForward(double angletemp, double lenght_of_path,PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[]);
+
+void Orientation(double angle, double angletemp, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[];
+
+void GoDownAndUp(double up_down,double angletemp, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[];
+
 ```cpp
 # --------------------------------------------------------------------------------
 #                         Locate files (change as needed).
@@ -45,9 +59,9 @@ set(TESTFILES        # All .cpp files in tests/
     TestVec2.cpp
     drones_tests.cpp
 )
-set(LIBRARY_NAME zad3)  # Default name for the library built from src/*.cpp (change if you wish)
+set(LIBRARY_NAME zad5_3)  # Default name for the library built from src/*.cpp (change if you wish)
 ```
-* changes to zad5_2/tests/CMakeLists.txt with new files added, i.e.:
+* changes to zad5_3/tests/CMakeLists.txt with new files added, i.e.:
 ```cpp
 # List all files containing tests. (Change as needed)
 set(TESTFILES        # All .cpp files in tests/
