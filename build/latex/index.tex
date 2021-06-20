@@ -2,7 +2,7 @@
 \Hypertarget{index_md_README}%
  
 \begin{DoxyInlineImage}
-\includegraphics[height=\baselineskip,keepaspectratio=true]{Diagram3.png}%Class Diagram
+\includegraphics[height=\baselineskip,keepaspectratio=true]{Diagram_poprawiony.png}%Class Diagram
 \end{DoxyInlineImage}
  \hypertarget{index_autotoc_md0}{}\doxysubsection{Building}\label{index_autotoc_md0}
 Build by making a build directory (i.\+e. {\ttfamily build/}), run {\ttfamily cmake} in that dir, and then use {\ttfamily make} to build the desired target.
@@ -28,17 +28,15 @@ Things to remember\+:
 \begin{DoxyItemize}
 \item changes to zad5\+\_\+3/\+CMake\+Lists.\+txt with new files added, i.\+e.\+:
 \end{DoxyItemize}\hypertarget{index_autotoc_md1}{}\doxysubsection{ATTENTION}\label{index_autotoc_md1}
-Niestety z powodu blednego zapisania diagramy nie bylem w stanie dodawac do niego niektorych funkcji dlatego wprowadzam je tu. Odpowiadaja one za przelot drona oraz zwiad
+Diagram Klas rozpisany (gdyby był nieczytelny)\+:
 
-Klasa \mbox{\hyperlink{class_drone}{Drone}}
+Klasy\+: \mbox{\hyperlink{class_mount__with__ridge}{Mount\+\_\+with\+\_\+ridge}}, \mbox{\hyperlink{class_piramid}{Piramid}}, \mbox{\hyperlink{class_cuboid__obstacle}{Cuboid\+\_\+obstacle}}, \mbox{\hyperlink{class_drone}{Drone}} Dziedziczą po\+: \mbox{\hyperlink{class_scene__object}{Scene\+\_\+object}}
 
-void Scouting(double angle, Pz\+G\+::\+Lacze\+Do\+GNUPlota \&\+Lacze, const char $\ast$\+Names\+Files\+Local\mbox{[}$\,$\mbox{]}, const char $\ast$\+Names\+Files\+Proper\mbox{[}$\,$\mbox{]})
+Klasy\+: \mbox{\hyperlink{class_prostopadl}{Prostopadl}} , \mbox{\hyperlink{class_block}{Block}} Dziedziczą po\+: \mbox{\hyperlink{class_gran_block}{Gran\+Block}} (Klasa rodzica)
 
-void Go\+Forward(double angletemp, double lenght\+\_\+of\+\_\+path,\+Pz\+G\+::\+Lacze\+Do\+GNUPlota \&\+Lacze, const char $\ast$\+Names\+Files\+Local\mbox{[}$\,$\mbox{]},const char $\ast$\+Names\+Files\+Proper\mbox{[}$\,$\mbox{]});
+Klasa\+: \mbox{\hyperlink{class_drone}{Drone}} Dziedziczy po\+: \mbox{\hyperlink{class_prostopadl}{Prostopadl}} , \mbox{\hyperlink{class_block}{Block}}
 
-void Orientation(double angle, double angletemp, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, const char $\ast$\+Names\+Files\+Local\mbox{[}\mbox{]}, const char $\ast$\+Names\+Files\+Proper\mbox{[}\mbox{]};
-
-void Go\+Down\+And\+Up(double up\+\_\+down,double angletemp, \mbox{\hyperlink{class_pz_g_1_1_lacze_do_g_n_u_plota}{Pz\+G\+::\+Lacze\+Do\+GNUPlota}} \&Lacze, const char $\ast$\+Names\+Files\+Local\mbox{[}\mbox{]},const char $\ast$\+Names\+Files\+Proper\mbox{[}\mbox{]};
+Klasa\+: scena Dziedziczy po\+: \mbox{\hyperlink{class_drone}{Drone}}
 
 
 \begin{DoxyCode}{0}

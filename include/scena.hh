@@ -16,7 +16,7 @@ const char *NamesFilesLoc_V2[] = {SZESCIAN_ZM_LOC_V2,ROTORYLOC_1_V2,ROTORYLOC_2_
 const char *NamesFilesProp_V2[] = {SZESCIAN_ZM_V2,ROTORY_1_V2,ROTORY_2_V2,ROTORY_3_V2,ROTORY_4_V2, nullptr};
 
 /**
- * \brief Klasa sceny
+ * \brief Klasa scena
  * 
  * Klasa pozwalajaca operowac na odpowiednich figurach
  * 
@@ -135,6 +135,48 @@ void Initiation_begin_obstacles(PzG::LaczeDoGNUPlota &Lacze){
     make_obstacle(Lacze,arg3,scale,'3');
     make_obstacle(Lacze,arg4,scale,'2');
 
+};
+
+/**
+* Metoda usuwajaca przeszkody 
+* @param PzG::LaczeDoGNUPlota &Lacze
+*/
+void Delete_Obstacle(PzG::LaczeDoGNUPlota &Lacze){
+    int i = 0;
+    unsigned int num_obs;
+    std::list<std::shared_ptr<Scene_object>>::iterator it = Objects.begin();
+    std::cout << "choose which obstacle you want to delete : " << std::endl;
+    advance(it,2);
+    while( it != Objects.end()){
+        (*it)->show_parameters(i);
+        ++it;
+        ++i;
+    }
+    std::cin >> num_obs;
+    it = Objects.begin();
+    advance(it,num_obs+1);
+    (*it)->delete_Obstacle(Lacze);
+    Objects.erase(it);
+        
+    Lacze.Rysuj();
+};
+
+void Create_Obstacle(PzG::LaczeDoGNUPlota &Lacze){
+char obs_choice;
+    Vector3 beg_position;
+    Vector3 scale;
+    std::cout << "which type of obstacle you want to add ?" << std::endl;
+    std::cout << "1 - Piramid" << std::endl;
+    std::cout << "2 - Mountain with ridge" << std::endl;
+    std::cout << "3 - Cuboid" << std::endl;
+    std::cin >> obs_choice;
+    std::cout<< "where do you want the middle of obstacle write position x,y" << std::endl;
+    std::cin >> beg_position[0];
+    std::cin >> beg_position[1];
+    std::cout<< "Choose the scale on OX, OY, OZ (for example 10 10 60): " << std::endl;
+    std::cin >> scale;
+    make_obstacle(Lacze,beg_position,scale,obs_choice);
+    std::cout<< "Element has been added to the scene " << std::endl;
 };
 
 };

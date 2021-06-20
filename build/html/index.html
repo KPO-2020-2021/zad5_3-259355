@@ -65,7 +65,7 @@ $(function() {
 <div class="title">Dragonfly </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p class=""><a class="anchor" id="md_README"></a> <img src="Diagram3.png" alt="" class="inline" title="Class Diagram"/> </p>
+<div class="textblock"><p class=""><a class="anchor" id="md_README"></a> <img src="Diagram_poprawiony.png" alt="" class="inline" title="Class Diagram"/> </p>
 <h2><a class="anchor" id="autotoc_md0"></a>
 Building</h2>
 <p class="">Build by making a build directory (i.e. <code>build/</code>), run <code>cmake</code> in that dir, and then use <code>make</code> to build the desired target.</p>
@@ -83,12 +83,11 @@ Building</h2>
 </ul>
 <h2><a class="anchor" id="autotoc_md1"></a>
 ATTENTION</h2>
-<p class="">Niestety z powodu blednego zapisania diagramy nie bylem w stanie dodawac do niego niektorych funkcji dlatego wprowadzam je tu. Odpowiadaja one za przelot drona oraz zwiad</p>
-<p class="">Klasa <a class="el" href="class_drone.html" title="Klasa Drona.">Drone</a></p>
-<p class="">void Scouting(double angle, PzG::LaczeDoGNUPlota &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])</p>
-<p class="">void GoForward(double angletemp, double lenght_of_path,PzG::LaczeDoGNUPlota &amp;Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[]);</p>
-<p class="">void Orientation(double angle, double angletemp, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[];</p>
-<p class="">void GoDownAndUp(double up_down,double angletemp, <a class="el" href="class_pz_g_1_1_lacze_do_g_n_u_plota.html" title="Klasa realizuje interfejs do programu GNUPlot.">PzG::LaczeDoGNUPlota</a> &amp;Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[];</p>
+<p class="">Diagram Klas rozpisany (gdyby był nieczytelny):</p>
+<p class="">Klasy: <a class="el" href="class_mount__with__ridge.html" title="Klasa Mount_with_ridge.">Mount_with_ridge</a>, <a class="el" href="class_piramid.html" title="Klasa Piramidy.">Piramid</a>, <a class="el" href="class_cuboid__obstacle.html" title="Klasa Cuboid.">Cuboid_obstacle</a>, <a class="el" href="class_drone.html" title="Klasa Drona.">Drone</a> Dziedziczą po: <a class="el" href="class_scene__object.html" title="Klasa Sceny obiektow.">Scene_object</a></p>
+<p class="">Klasy: <a class="el" href="class_prostopadl.html" title="Klasa Prostopadloscianu.">Prostopadl</a> , <a class="el" href="class_block.html" title="Klasa Block.">Block</a> Dziedziczą po: <a class="el" href="class_gran_block.html" title="Klasa Drona.">GranBlock</a> (Klasa rodzica)</p>
+<p class="">Klasa: <a class="el" href="class_drone.html" title="Klasa Drona.">Drone</a> Dziedziczy po: <a class="el" href="class_prostopadl.html" title="Klasa Prostopadloscianu.">Prostopadl</a> , <a class="el" href="class_block.html" title="Klasa Block.">Block</a></p>
+<p class="">Klasa: scena Dziedziczy po: <a class="el" href="class_drone.html" title="Klasa Drona.">Drone</a></p>
 <div class="fragment"><div class="line"><span class="preprocessor"># --------------------------------------------------------------------------------</span></div>
 <div class="line"><span class="preprocessor">#                         Locate files (change as needed).</span></div>
 <div class="line"><span class="preprocessor"># --------------------------------------------------------------------------------</span></div>
@@ -121,7 +120,7 @@ ATTENTION</h2>
 <div class="ttc" id="aclass_mount__with__ridge_html"><div class="ttname"><a href="class_mount__with__ridge.html">Mount_with_ridge</a></div><div class="ttdoc">Klasa Mount_with_ridge.</div><div class="ttdef"><b>Definition:</b> Mount_with_ridge.hh:12</div></div>
 <div class="ttc" id="aclass_piramid_html"><div class="ttname"><a href="class_piramid.html">Piramid</a></div><div class="ttdoc">Klasa Piramidy.</div><div class="ttdef"><b>Definition:</b> Piramid.hh:13</div></div>
 <div class="ttc" id="aclass_prostopadl_html"><div class="ttname"><a href="class_prostopadl.html">Prostopadl</a></div><div class="ttdoc">Klasa Prostopadloscianu.</div><div class="ttdef"><b>Definition:</b> Prostopadl.hh:25</div></div>
-<div class="ttc" id="aclassscena_html"><div class="ttname"><a href="classscena.html">scena</a></div><div class="ttdoc">Klasa sceny.</div><div class="ttdef"><b>Definition:</b> scena.hh:24</div></div>
+<div class="ttc" id="aclassscena_html"><div class="ttname"><a href="classscena.html">scena</a></div><div class="ttdoc">Klasa scena.</div><div class="ttdef"><b>Definition:</b> scena.hh:24</div></div>
 </div><!-- fragment --><ul>
 <li>changes to zad5_3/tests/CMakeLists.txt with new files added, i.e.: <div class="fragment"><div class="line"><span class="preprocessor"># List all files containing tests. (Change as needed)</span></div>
 <div class="line">set(TESTFILES        # All .cpp files in tests/</div>

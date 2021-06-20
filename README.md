@@ -1,4 +1,4 @@
-![Class Diagram](/Diagram3.png)
+![Class Diagram](/Diagram_poprawiony.png)
 ## Building
 
 Build by making a build directory (i.e. `build/`), run `cmake` in that dir, and then use `make` to build the desired target.
@@ -21,18 +21,16 @@ Things to remember:
 * changes to zad5_3/CMakeLists.txt with new files added, i.e.:
 
 ## ATTENTION
-Niestety z powodu blednego zapisania diagramy nie bylem w stanie dodawac do niego niektorych funkcji 
-dlatego wprowadzam je tu. Odpowiadaja one za przelot drona oraz zwiad 
+Diagram Klas rozpisany (gdyby był nieczytelny):
 
-Klasa Drone
 
-void Scouting(double angle, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[])
+Klasy: Mount_with_ridge, Piramid, Cuboid_obstacle, Drone       Dziedziczą po: Scene_object
 
-void GoForward(double angletemp, double lenght_of_path,PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[]);
+Klasy: Prostopadl , Block       Dziedziczą po: GranBlock (Klasa rodzica)
 
-void Orientation(double angle, double angletemp, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[], const char *NamesFilesProper[];
+Klasa: Drone        Dziedziczy po: Prostopadl , Block
 
-void GoDownAndUp(double up_down,double angletemp, PzG::LaczeDoGNUPlota &Lacze, const char *NamesFilesLocal[],const char *NamesFilesProper[];
+Klasa: scena        Dziedziczy po: Drone
 
 ```cpp
 # --------------------------------------------------------------------------------

@@ -131,5 +131,54 @@ TEST_CASE("Inheritance of functions"){
    CHECK( 1 == 1 ); 
 }
 
+TEST_CASE("Scene functions"){
+  PzG::LaczeDoGNUPlota Lacze;
+  scena Scena;
+  Drone drone1, drone2;
+  Drone *drn;
+
+  double arg1[] = {20,20,0};
+  drone1.position[0] = Vector3(arg1);
+  drone1.Engage2(0, drone1.position[0], NamesFilesLoc_V1, NamesFilesProp_V1,0);
+  double arg2[] = {20,60,0};
+  drone2.position[0] = Vector3(arg2);
+  drone2.Engage2(0, drone2.position[0], NamesFilesLoc_V2, NamesFilesProp_V2,0);
+
+  drone1.position[1] = drone1.position[0];
+  drone2.position[1] = drone2.position[0];
+
+  drone1.set_mid(drone1.position[0]);
+  drone1.set_obst(drone1.get_corp(SZESCIAN_ZM));
+  drone1.set_name("Drone1");
+  drone2.set_mid(drone2.position[0]);
+  drone2.set_obst(drone2.get_corp(SZESCIAN_ZM_V2));
+  drone2.set_name("Drone2");
+
+  Scena.Add_drone(drone1);
+  Scena.Add_drone(drone2);
+
+  
+  Scena.Objects.push_front(std::make_shared<Drone>(drone2));
+  Scena.Objects.push_front(std::make_shared<Drone>(drone1));
+
+  SUBCASE("Index of drone and its position"){
+        Scena.choose_drone(1);
+        drn = Scena.getdrone();
+    CHECK( Scena.get_active_num() == 0);
+    CHECK((*drn).position[0] == drone1.position[0]);
+  }
+  SUBCASE("Checking if both drones are added"){
+      CHECK(Scena.Objects.size() == 2); 
+  }
+  SUBCASE("Checking if both drones are added and 4 obstacles"){
+      Scena.Initiation_begin_obstacles(Lacze);
+      CHECK(Scena.Objects.size() == 6); 
+  }
+  SUBCASE("Checking types of Objects on list"){
+      std::list<std::shared_ptr<Scene_object>>::iterator it = Scena.Objects.begin();
+      CHECK((*it)->get_name() == "Drone1");
+  }
+}
+
 
 
