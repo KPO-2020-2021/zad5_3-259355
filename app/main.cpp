@@ -133,7 +133,6 @@ scena Scena;
   double choice_drone = 0;
   double angle1=0, angle2=0;
   double tmp1 = 0, tmp2 = 0;
-  unsigned int temp = 0;
   char choice = 'a';
   while (choice != 'k'){
   
@@ -218,12 +217,10 @@ scena Scena;
       case 'd':{
         int i = 0;
         unsigned int num_obs;
-        // list<shared_ptr<Scene_object>>::iterator it = Scena.Obstacles.begin();
         list<shared_ptr<Scene_object>>::iterator it = Scena.Objects.begin();
         cout << "choose which obstacle you want to delete : " << endl;
         advance(it,2);
         while( it != Scena.Objects.end()){
-          // advance(it,2);
           (*it)->show_parameters(i);
           ++it;
           ++i;
@@ -243,34 +240,13 @@ scena Scena;
         cout << "choose which drone would you fly (1,2)" << endl;
         cin >> choice_drone;
         if(choice_drone == 1 || choice_drone == 2){
-          if(temp == 0){
-            // Scena.Objects.pop_front();
-            Scena.choose_drone(choice_drone);
-            drn = Scena.getdrone();
-            // (*drn).set_mid((*drn).position[0]);
-            // // (*drn).set_obst((*drn).get_corp());
-            // (*drn).set_name("Drone");
-            // Scena.Objects.push_front(make_shared<Scene_object>(*drn));
-            temp += 1;
-          }
-          else if(temp == 1){
-            // Scena.Objects.pop_front();
-            // Scena.Objects.pop_front();
-            // Scena.Objects.push_front(make_shared<Scene_object>(*drn));
-            Scena.choose_drone(choice_drone);
-            drn = Scena.getdrone();
-            // (*drn).set_mid((*drn).position[0]);
-            // (*drn).set_obst((*drn).get_corp());
-            // (*drn).set_name("Drone");
-            // Scena.Objects.push_front(make_shared<Scene_object>(*drn));
-          }
+          Scena.choose_drone(choice_drone);
+          drn = Scena.getdrone();
           cout << "You have choosen drone at the position: " << endl;
-          // Scena.choose_drone(choice_drone);
-          // drn = Scena.getdrone();
-          // Scena.Obstacles.push_front(make_shared<Scene_object>(*drn));
           cout << drn->position[0] << endl;}
           else{
             cout << "Wrong choice" << endl;
+            choice_drone = 0;
           }}
         break;}
 
