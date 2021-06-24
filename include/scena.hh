@@ -161,6 +161,10 @@ void Delete_Obstacle(PzG::LaczeDoGNUPlota &Lacze){
     Lacze.Rysuj();
 };
 
+/**
+* Metoda wyboru i wytworzenia przeszkody 
+* @param PzG::LaczeDoGNUPlota &Lacze
+*/
 void Create_Obstacle(PzG::LaczeDoGNUPlota &Lacze){
 char obs_choice;
     Vector3 beg_position;
