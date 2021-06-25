@@ -194,6 +194,7 @@ scena Scena;
 
       case 'k':{
         cout << "the end" << endl;
+        Scena.delete_at_the_end(Lacze);
         break;}
 
       case 'o':{

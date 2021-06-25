@@ -14,6 +14,10 @@ Vector3.hh
 matrix3.hh
 ../include/matrix3.hh
 
+../include/Cuboid_obstacle.hh
+Scene_object.hh
+../include/Scene_object.hh
+
 ../include/Drone.hh
 Prostopadl.hh
 ../include/Prostopadl.hh
@@ -49,6 +53,14 @@ unistd.h
 -
 vector
 -
+
+../include/Mount_with_ridge.hh
+Scene_object.hh
+../include/Scene_object.hh
+
+../include/Piramid.hh
+Scene_object.hh
+../include/Scene_object.hh
 
 ../include/Prostopadl.hh
 matrix3.hh
@@ -128,7 +140,19 @@ math.h
 iomanip
 -
 
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Cuboid_obstacle.cpp
+Cuboid_obstacle.hh
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Cuboid_obstacle.hh
+
 /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Drone.cpp
 Drone.hh
 /home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Drone.hh
+
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Mount_with_ridge.cpp
+Mount_with_ridge.hh
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Mount_with_ridge.hh
+
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Piramid.cpp
+Piramid.hh
+/home/adam/Programowanie_Obiektowe/zad5_3-259355/src/Piramid.hh
 

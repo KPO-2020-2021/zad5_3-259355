@@ -162,6 +162,19 @@ void Delete_Obstacle(PzG::LaczeDoGNUPlota &Lacze){
 };
 
 /**
+ * Metoda usuwajaca plik przeszkody      
+ * @param PzG::LaczeDoGNUPlota &Lacze
+ */
+void delete_at_the_end(PzG::LaczeDoGNUPlota &Lacze){
+    std::list<std::shared_ptr<Scene_object>>::iterator it = Objects.begin();
+    advance(it,2);
+    while( it != Objects.end()){
+    (*it)->delete_Obstacle(Lacze);
+    ++it;
+    }
+};
+
+/**
 * Metoda wyboru i wytworzenia przeszkody 
 * @param PzG::LaczeDoGNUPlota &Lacze
 */

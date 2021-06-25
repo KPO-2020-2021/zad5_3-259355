@@ -104,6 +104,13 @@ class Scene_object{
         return name;
     };
 
+    /**
+     * Metoda dajaca dostpe do typu przeszkody 
+     * @return name_of_file
+     */
+    std::string get_name_of_file(){
+        return name_of_file;
+    };
 
     /**
      * Metoda wirtualna sprawdzajaca czy dron moze ladowac
